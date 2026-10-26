@@ -182,3 +182,107 @@
     border-right-color: var(--border);
   }
 }
+
+
+/* Pepsi promotional section */
+.promotions-section {
+width: 100%;
+overflow: hidden;
+padding: 0 0 40px;
+background-color: #000;
+box-sizing: border-box;
+}
+
+/* Horizontal image carousel */
+.promotions-track {
+display: flex;
+gap: 24px;
+width: 100%;
+padding: 0 8%;
+overflow-x: auto;
+overflow-y: hidden;
+scroll-behavior: smooth;
+scroll-snap-type: x mandatory;
+box-sizing: border-box;
+scrollbar-width: none;
+-ms-overflow-style: none;
+}
+
+.promotions-track::-webkit-scrollbar {
+display: none;
+}
+
+/* Individual image cards */
+.promotion-card {
+flex: 0 0 38%;
+min-width: 0;
+overflow: hidden;
+scroll-snap-align: start;
+}
+
+/* Clickable images */
+.promotion-card a {
+display: block;
+width: 100%;
+}
+
+.promotion-image {
+display: block;
+width: 100%;
+height: 320px;
+object-fit: contain;
+object-position: center;
+}
+
+/* Navigation dots */
+.carousel-dots {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 9px;
+padding: 20px 0;
+background-color: #000;
+}
+
+.carousel-dot {
+width: 6px;
+height: 6px;
+padding: 0;
+border: none;
+border-radius: 50%;
+background-color: #666;
+cursor: pointer;
+}
+
+.carousel-dot.active {
+background-color: #fff;
+outline: 1px solid #fff;
+outline-offset: 4px;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+.promotion-card {
+flex-basis: 45%;
+}
+
+.promotion-image {
+height: 260px;
+}
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+.promotions-track {
+gap: 12px;
+padding: 0 5%;
+}
+
+.promotion-card {
+flex-basis: 80%;
+}
+
+.promotion-image {
+height: 220px;
+}
+}
