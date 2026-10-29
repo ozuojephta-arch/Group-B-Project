@@ -1,5 +1,6 @@
 import React from "react";
 import Products from "./COMPONENT/PRODUCT-SECTION/Product";
+import Footer from "./Footer/Footer";
 // import Hero from "./components/Hero";
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <>
       {/* <Hero /> */}
       <Products />
+      <Footer />
     </>
   );
 }
